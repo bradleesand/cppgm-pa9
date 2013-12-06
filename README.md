@@ -597,7 +597,7 @@ The objdump gives us:
 
 So we can see the pointers are passed in `rdi`, `rsi` and `rdx`.  The first two FLD instructions load from the memory addresses `[rsi]` and `[rdi]` onto the x87 FPU register stack.  The FADDP instructions adds the two top values.  The FSTP then stores the result to the memory address.  The type TBYTE is for 10 bytes or 80 bits.  The prefix `TBYTE PTR` explicitly states the operand size.  If the assembler can determine this from the context this prefix can be omitted.
 
-To compare your x86 instruction to ma achine code assembler you can use a file like this:
+To compare your x86 instruction to machine code translator to a production assembler you can use a gas input file like this:
 
     .intel_syntax noprefix
     .global _start
