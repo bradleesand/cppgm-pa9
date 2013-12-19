@@ -188,6 +188,12 @@ The address of the first byte is given by the expression inside the square brack
 
 The _red zone_ (the 128 bytes from `[sp-128]` to `[sp-1]` inclusive ) is reserved and is undefined in CY86 programs.  (This allows your CY86 implementation to use this area for temporary storage).
 
+#### Entry Point
+
+If there exists a label `start`, the entry point of a CY86 program is the label `start`.
+
+Otherwise, the entry point of a CY86 program is the first `statement` in the `program`. 
+
 ### CY86 Opcode Descriptions
 
 In the following documentation, each opcode descriptor is followed by one or more operand descriptors.  An operand descriptor is a string that is a concatenation of one or more of the following strings:
