@@ -47,7 +47,7 @@ for my $test (sort @tests)
 	my $my_program_exit_status = "$my.program.exit_status";
 	my $my_program_stdout = "$my.program.stdout";
 
-	if (getdata($ref_impl_exit_status) ne getdata($ref_impl_exit_status))
+	if (getdata($ref_impl_exit_status) ne getdata($my_impl_exit_status))
 	{
 		print "ERROR: $testbase: implementations exit statuses do not match (.impl.exit_status)\n";
 		print "TEST FAIL\n";
