@@ -137,7 +137,9 @@ The CY86 machine has four general-purpose 64-bit registers `x64`, `y64`, `z64` a
     x8    x16    x32    x64
     y8    y16    y32    y64
     z8    z16    z32    z64
-	t8    t16    t32    t64
+    t8    t16    t32    t64
+
+> NOTE: When an instruction writes to x32, it shall zero the upper 32 bits of x64.  Likewise for y32-y64, z32-z64 and t32-t64.  This is to match the behaviour of x86 registers.
 
 As well as two 64-bit address registers:
 
